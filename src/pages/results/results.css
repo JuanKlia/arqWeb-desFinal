@@ -1,0 +1,93 @@
+.results-container {
+  height: 100%;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  text-align: center;
+  border: solid 3px;
+  border-radius: 15px;
+  padding: 60px 30px 30px 30px;
+  flex-grow: 1;
+  height: 650px;
+
+  width: 350px;
+}
+@media (min-width: 600px) {
+  .results-container {
+    width: 530px;
+  }
+}
+.box-result {
+  position: absolute;
+  top: 200;
+  z-index: 10;
+}
+.button1-result {
+  position: absolute;
+  z-index: 10;
+  top: 440;
+  background-color: honeydew;
+}
+.button2-result {
+  position: absolute;
+  z-index: 10;
+  top: 540;
+  background-color: honeydew;
+}
+.button1-result:hover,
+.button2-result:hover {
+  
+}
+@keyframes bordera {
+  0% {
+
+  }
+  100% {
+  
+  }
+}
+
+.result-mask {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  top: 650;
+  opacity: 0.3;
+  z-index: 1;
+  animation: rellenar 3s forwards ;
+}
+@keyframes rellenar{
+  from{
+    top: 650;
+  }
+  to{
+    top: 0;
+  }
+}
+.perdi {
+  background-color: red;
+}
+.gane {
+  background-color: green;
+}
+.empate {
+  background-color: yellow;
+}
+.result-title,.box-result, .button1-result , .button2-result{
+  opacity: 0;
+  animation: aparecer 3s forwards;
+  animation-delay: 1.9s;
+}
+@keyframes aparecer{
+  from{
+    opacity: 0;
+  }
+  to{
+    opacity: 1;
+  }
+}
+
+
